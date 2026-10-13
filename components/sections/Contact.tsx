@@ -2,7 +2,7 @@
 import { useState, type FormEvent } from "react";
 import { ArrowUpRight, CheckCircle2, Mail } from "lucide-react";
 import { site } from "@/lib/content";
-import { Button } from "@/components/ui/Button";
+import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";

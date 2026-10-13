@@ -2,7 +2,7 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { site } from "@/lib/content";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
 export function Header() {

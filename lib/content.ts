@@ -29,10 +29,10 @@ export const site = {
     { title: "More variations", text: "Explore directions, formats and details with ease.", icon: "Layers3" },
     { title: "Made for every channel", text: "Assets sized and styled for where your audience is.", icon: "PanelsTopLeft" },
   ],
-  about: { title: "A small studio with a wide creative lens.", text: "AORÈN is a one-person AI advertising studio combining art direction, emerging tools and a deep respect for brand feeling." },
+  about: { title: "A modern creative studio with a wide lens.", text: "AORÈN is an independent AI advertising studio combining cinematic art direction, emerging tools, and a deep respect for brand feeling." },
   founders: [
-    { name: "Founder Name", role: "Founder & Creative Director", bio: "A short line about their perspective and background.", image: "/founder-placeholder.svg" },
-    { name: "Founder Name", role: "Creative Partner", bio: "A short line about their perspective and background.", image: "/founder-placeholder.svg" },
+    { name: "Arafat Hossain Araf", role: "Founder & CEO", bio: "Leading creative direction, visual language, and AI-native brand storytelling.", image: "/team/arafat.jpg" },
+    { name: "Faisal Islam Shaker", role: "COO & Co-Founder", bio: "Spearheading studio operations, scalable client delivery, and agile production.", image: "/team/faisal.jpg" },
   ],
   contact: { email: "hello@aoren.studio", instagram: "Instagram", linkedin: "LinkedIn" },
 };

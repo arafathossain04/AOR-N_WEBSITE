@@ -1,4 +1,4 @@
-// File: /Users/arafathossaintushar/Documents/AORÈN_Website/app/page.tsx
+// File: /Users/arafathossaintushar/Documents/AORÈN_WEBSITE/AOR-N_WEBSITE/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

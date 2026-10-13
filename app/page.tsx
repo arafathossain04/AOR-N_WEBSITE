@@ -10,5 +10,20 @@ import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
-  return <><Header /><main><Hero /><Services /><Works /><Pricing /><Testimonials /><WhyUs /><About /><Contact /></main><Footer /></>;
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Services />
+        <Works />
+        <Pricing />
+        <Testimonials />
+        <WhyUs />
+        <About />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
 }

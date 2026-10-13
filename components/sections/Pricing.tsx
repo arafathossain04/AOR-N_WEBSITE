@@ -1,9 +1,94 @@
-import { Check } from "lucide-react";
-import { site } from "@/lib/content";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/Card";
-import { Container } from "@/components/ui/Container";
-import { Reveal } from "@/components/ui/Reveal";
-import { SectionHeading } from "@/components/ui/SectionHeading";
+"use client";
 
-export function Pricing() { return <section id="pricing" className="bg-navy/45 py-20 sm:py-28"><Container><Reveal><SectionHeading eyebrow="Pricing" title="Choose a starting point." text="Indicative packages — replace these placeholders with your final offer." /></Reveal><div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">{site.pricing.map((tier, i) => <Reveal delay={i * .06} key={tier.name}><Card className={`flex h-full flex-col p-6 ${tier.featured ? "border-electric bg-indigo/35 shadow-glow" : ""}`}><p className="text-sm text-glacier">{tier.name}</p><p className="mt-4 font-display text-3xl text-white">{tier.price}</p><ul className="my-8 flex-1 space-y-3">{tier.features.map(feature => <li className="flex gap-2 text-sm text-ice/70" key={feature}><Check size={16} className="mt-.5 shrink-0 text-glacier" />{feature}</li>)}</ul><Button href="#contact" variant={tier.featured ? "default" : "secondary"} className="w-full">Enquire</Button></Card></Reveal>)}</div></Container></section>; }
+import { Pricing, type PricingPlan } from "@/components/ui/pricing";
+
+export const aorenPricingPlans: PricingPlan[] = [
+  {
+    name: "Basic",
+    price: "1200",
+    yearlyPrice: "960",
+    period: "month",
+    features: [
+      "Single creative direction",
+      "1 finished high-res asset",
+      "Platform-ready cutdown delivery",
+      "2 focused revision rounds",
+      "Commercial usage rights",
+    ],
+    description: "Ideal for early-stage brands launching a focused campaign.",
+    buttonText: "Schedule a Meeting",
+    href: "#contact",
+    isPopular: false,
+  },
+  {
+    name: "Pro",
+    price: "2800",
+    yearlyPrice: "2240",
+    period: "month",
+    features: [
+      "Expanded creative direction",
+      "3 finished premium assets",
+      "Multiple social aspect ratios (9:16, 16:9, 1:1)",
+      "2 focused revision rounds",
+      "Priority production timeline",
+      "Dedicated Slack communication",
+    ],
+    description: "Designed for ambitious growth brands running multi-channel ads.",
+    buttonText: "Schedule a Meeting",
+    href: "#contact",
+    isPopular: false,
+  },
+  {
+    name: "MAX",
+    price: "4900",
+    yearlyPrice: "3920",
+    period: "month",
+    features: [
+      "Comprehensive campaign concept & narrative",
+      "6 finished multi-format video & image assets",
+      "Full variation set for A/B creative testing",
+      "Platform-specific hooks & CTAs",
+      "Priority production timeline",
+      "Dedicated creative partner",
+    ],
+    description: "Our highest output partnership for scale-ready campaigns.",
+    buttonText: "Schedule a Meeting",
+    href: "#contact",
+    isPopular: true,
+    popularLabel: "Best Value",
+  },
+  {
+    name: "Custom",
+    price: "0",
+    yearlyPrice: "0",
+    period: "custom",
+    features: [
+      "Tailored production scope",
+      "Ongoing monthly content systems",
+      "Custom AI model fine-tuning & brand styling",
+      "Full omnichannel campaign rollout",
+      "Direct creative director partnership",
+    ],
+    description: "Enterprise and bespoke solutions tailored to your brand roadmap.",
+    buttonText: "Schedule a Meeting",
+    href: "#contact",
+    isPopular: false,
+    isCustom: true,
+    customPriceLabel: "Let’s talk",
+  },
+];
+
+export function PricingSection() {
+  return (
+    <section id="pricing" className="relative w-full bg-navy/45 py-20 sm:py-28 overflow-hidden">
+      <Pricing
+        plans={aorenPricingPlans}
+        eyebrow="Pricing"
+        title="Choose a starting point."
+        description="Indicative studio packages for video and image advertising. Flexible retainers and custom scopes available."
+      />
+    </section>
+  );
+}
+
+export { PricingSection as Pricing };

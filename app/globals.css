@@ -2,7 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { --midnight:#030407; --navy:#050B2B; --indigo:#071F78; --electric:#0868DB; --glacier:#8BC9F7; --ice:#C8E9FF; --background:220 80% 2%; --primary:211 93% 44%; --primary-foreground:0 0% 100%; --ring:203 86% 76%; }
+:root {
+  --midnight:#030407;
+  --navy:#050B2B;
+  --indigo:#071F78;
+  --electric:#0868DB;
+  --glacier:#8BC9F7;
+  --ice:#C8E9FF;
+  --background: 220 80% 2%;
+  --foreground: 204 100% 89%;
+  --card: 220 70% 4%;
+  --card-foreground: 204 100% 89%;
+  --popover: 220 70% 4%;
+  --popover-foreground: 204 100% 89%;
+  --primary: 211 93% 44%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 228 80% 10%;
+  --secondary-foreground: 204 100% 89%;
+  --muted: 228 70% 12%;
+  --muted-foreground: 204 50% 65%;
+  --accent: 228 70% 12%;
+  --accent-foreground: 204 100% 89%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 204 60% 20%;
+  --input: 204 60% 20%;
+  --ring: 203 86% 76%;
+}
 * { box-sizing: border-box; }
 html { background: var(--midnight); }
 body { margin:0; background:var(--midnight); color:var(--ice); font-family:var(--font-inter), sans-serif; overflow-x:hidden; }
@@ -13,7 +39,7 @@ button, input, select, textarea { font: inherit; }
 .text-gradient { background:linear-gradient(110deg,#fff 15%,var(--ice) 50%,var(--glacier)); -webkit-background-clip:text; background-clip:text; color:transparent; }
 .surface { border:1px solid rgba(139,201,247,.14); background:linear-gradient(145deg,rgba(7,31,120,.26),rgba(5,11,43,.64)); }
 
-.hero-eclipse { position:absolute; z-index:0; bottom:calc(-200vw + 2rem); left:50%; top: 90%; width:390vw; height:320vw; transform:translateX(-50%); border-radius:50%; background:#000000; pointer-events:none;}
+.hero-eclipse { position:absolute; z-index:0; bottom:calc(-200vw + 2rem); left:50%; top: 90%; width:390vw; height:320vw; transform:translateX(-50%); border-radius:50%; background:#030407; pointer-events:none;}
 .hero-eclipse::after { content:""; position:absolute; z-index: 1; top:2px; left:50%; width:390vw; height:320vw; transform:translateX(-50%); border-radius: 50%; background:transparent; box-shadow:0 0 12px 2px rgba(200,233,255,.9),0 0 18px 4px rgba(139,201,247,.45); }
 @media (max-width:640px) { .hero-eclipse { bottom:calc(-180vw + 2.75rem); width:130vw; height:60vw; } .hero-eclipse::after { bottom:calc(-180vw + 2.75rem); width:130vw; height:60vw; }}
 @media (prefers-reduced-motion:reduce) { .hero-eclipse { animation:none; opacity:.9; } }

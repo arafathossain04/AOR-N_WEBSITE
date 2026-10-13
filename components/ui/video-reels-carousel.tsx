@@ -12,6 +12,22 @@ export interface VideoReelsCarouselProps {
   className?: string;
 }
 
+/**
+ * Normalizes video URLs to ensure they work in Next.js:
+ * In Next.js, files placed in `public/` (e.g. `public/videos/shoes1.mp4`)
+ * MUST be accessed via `/videos/shoes1.mp4` (without "public/").
+ * This helper automatically handles both cases so either input works seamlessly.
+ */
+function formatVideoUrl(url?: string): string {
+  if (!url) return "";
+  const trimmed = url.trim();
+  if (trimmed.startsWith("http://") || trimmed.startsWith("https://")) return trimmed;
+  if (trimmed.startsWith("public/")) return `/${trimmed.replace(/^public\//, "")}`;
+  if (trimmed.startsWith("/public/")) return trimmed.replace(/^\/public/, "");
+  if (!trimmed.startsWith("/")) return `/${trimmed}`;
+  return trimmed;
+}
+
 export function VideoReelsCarousel({
   videos,
   autoSwipe = true,
@@ -106,7 +122,9 @@ export function VideoReelsCarousel({
         // If unmuted autoplay fails due to browser policy, fallback to muted
         videoEl.muted = true;
         setIsMuted(true);
-        videoEl.play();
+        videoEl.play().catch((err) => {
+          console.warn("Could not play video:", err);
+        });
       });
     }
   };
@@ -141,6 +159,7 @@ export function VideoReelsCarousel({
   const renderCard = (reel: VideoAd, idx: number) => {
     const isPlaying = activeVideoIndex === idx;
     const progress = progressMap[idx] || 0;
+    const finalVideoUrl = formatVideoUrl(reel.videoUrl);
 
     return (
       <article
@@ -151,21 +170,22 @@ export function VideoReelsCarousel({
         {/* 9:16 Aspect Ratio Container */}
         <div className="relative aspect-[9/15] w-full overflow-hidden bg-midnight">
           {/* Static Poster / Thumbnail */}
-          <img
-            src={reel.thumbnail}
-            alt={reel.title}
-            loading="lazy"
-            className={`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
-              isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
-            }`}
-          />
+          {reel.thumbnail && (
+            <img
+              src={reel.thumbnail}
+              loading="lazy"
+              className={`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
+                isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"
+              }`}
+            />
+          )}
 
           {/* HTML5 Video Element */}
           <video
             ref={(el) => {
               videoRefs.current[idx] = el;
             }}
-            src={reel.videoUrl}
+            src={finalVideoUrl}
             playsInline
             loop
             preload="metadata"
@@ -199,16 +219,18 @@ export function VideoReelsCarousel({
               )}
 
               {/* Duration badge */}
-              <span className="flex items-center gap-1 rounded-full bg-midnight/80 px-2.5 py-1 text-xs font-mono text-ice/90 backdrop-blur-md">
-                {reel.duration}
-              </span>
+              {reel.duration && (
+                <span className="flex items-center gap-1 rounded-full bg-midnight/80 px-2.5 py-1 text-xs font-mono text-ice/90 backdrop-blur-md">
+                  {reel.duration}
+                </span>
+              )}
             </div>
           </div>
 
           {/* Center Play / Pause Indicator */}
           <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
             {!isPlaying ? (
-              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-electric/85 text-white shadow-[0_0_30px_rgba(8,104,219,0.7)] backdrop-blur-md transition-all duration-300 group-hover:scale-110">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-electric/85 text-white backdrop-blur-md transition-all duration-300 group-hover:scale-110">
                 <Play className="ml-1 h-6 w-6 fill-current text-white" />
               </div>
             ) : (
@@ -229,18 +251,6 @@ export function VideoReelsCarousel({
           )}
 
           {/* Bottom Metadata */}
-          <div className="absolute bottom-0 inset-x-0 p-5 z-20 pointer-events-none">
-            <div className="flex items-center justify-between text-xs text-ice/60 mb-1">
-            </div>
-            <h4 className="text-lg font-medium text-white group-hover:text-glacier transition-colors line-clamp-1">
-              {reel.title}
-            </h4>
-            {reel.description && (
-              <p className="text-xs text-ice/50 line-clamp-1 mt-1">
-                {reel.description}
-              </p>
-            )}
-          </div>
         </div>
       </article>
     );
@@ -324,4 +334,3 @@ export function VideoReelsCarousel({
 }
 
 export default VideoReelsCarousel;
-

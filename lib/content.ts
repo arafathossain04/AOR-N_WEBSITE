@@ -1,8 +1,10 @@
 export interface VideoAd {
   title: string;
-  duration: string;
-  thumbnail: string;
-  videoUrl: string;
+  category?: string;
+  duration?: string;
+  views?: string;
+  thumbnail?: string;
+  videoUrl: string; // Note: In Next.js, use "/videos/my-video.mp4" (do NOT include "public/")
   description?: string;
 }
 
@@ -106,11 +108,60 @@ export const site = {
    */
   videoAds: [
     {
-      title: "Aetherial Motion Study",
-      duration: "0:15",
-      thumbnail: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
-      videoUrl: "https://vjs.zencdn.net/v/oceans.mp4",
-      description: "High-cadence cinematic motion study tailored for modern luxury fashion houses.",
+      title: "Brown pebbled-leather sneaker",
+      duration: "0:10",
+      thumbnail: "/thumbnails/shoes1.png",
+      videoUrl: "/videos/shoes1.mp4",
+      description: "Built to Last",
+    },
+    {
+      title: "Tan leather handbag, brown handle",
+      duration: "0:09",
+      thumbnail: "/thumbnails/bag2.png",
+      videoUrl: "/videos/bag2.mp4",
+      description: "Made to Carry On",
+    },
+    {
+      title: "Rose-gold watch, black dial",
+      duration: "0:13",
+      thumbnail: "/thumbnails/watch2.png",
+      videoUrl: "/videos/watch2.mp4",
+      description: "Time, Perfected",
+    },
+    {
+      title: "Modern Essentials",
+      duration: "0:19",
+      thumbnail: "/thumbnails/headset.png",
+      videoUrl: "/videos/headset.mp4",
+      description: "Sound, Elevated",
+    },
+    {
+      title: "Royal spreading",
+      duration: "0:13",
+      thumbnail: "/thumbnails/perfume1.png",
+      videoUrl: "/videos/perfume1.mp4",
+      description: "Smell with Brand",
+    },
+    {
+      title: "Black and gold watch on wrist",
+      duration: "0:11",
+      thumbnail: "/thumbnails/watch1.png",
+      videoUrl: "/videos/watch1.mp4",
+      description: "Statement Pieces",
+    },
+    {
+      title: "Everyday Elegance",
+      duration: "0:11",
+      thumbnail: "/thumbnails/bag1.png",
+      videoUrl: "/videos/bag1.mp4",
+      description: "Gold-Finish Detail",
+    },
+    {
+      title: "Beige knit sneakers",
+      duration: "0:16",
+      thumbnail: "/thumbnails/shoes2.png",
+      videoUrl: "/videos/shoes2.mp4",
+      description: "Walk in Style",
     },
   ],
   pricing: [

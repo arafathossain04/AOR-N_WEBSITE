@@ -1332,13 +1332,6 @@ video {
 .border-transparent {
   border-color: transparent;
 }
-.border-\[\] {
-  border-color: ;
-}
-.border-\[red\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(255 0 0 / var(--tw-border-opacity, 1));
-}
 .bg-\[\#030407\] {
   --tw-bg-opacity: 1;
   background-color: rgb(3 4 7 / var(--tw-bg-opacity, 1));

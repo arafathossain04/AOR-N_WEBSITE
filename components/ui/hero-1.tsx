@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/Button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 interface HeroProps {
   eyebrow?: string;
@@ -43,10 +43,13 @@ export function Hero({
       </p>
 
       {ctaLabel && (
-        <div className="relative z-10 flex justify-center">
-          <Button asChild className="z-20 mt-[-20px] w-fit text-center text-lg font-sans tracking-tighter md:w-52">
-            <a href={ctaHref}>{ctaLabel}</a>
-          </Button>
+        <div className="relative z-20 flex justify-center mt-[-10px]">
+          <ShinyButton
+            href={ctaHref}
+            label={ctaLabel}
+            size="lg"
+            className="w-fit text-center font-sans tracking-tight"
+          />
         </div>
       )}
     </div>

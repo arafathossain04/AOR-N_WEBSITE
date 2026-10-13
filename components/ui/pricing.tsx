@@ -1,6 +1,7 @@
 "use client";
 
 import { buttonVariants } from "@/components/ui/Button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useMediaQuery } from "@/hooks/use-media-query";
@@ -211,21 +212,16 @@ export function Pricing({
 
                 <hr className="w-full my-6 border-indigo/60" />
 
-                <Link
+                <ShinyButton
                   href={plan.href}
-                  className={cn(
-                    buttonVariants({
-                      variant: "outline",
-                    }),
-                    "group relative w-full gap-2 overflow-hidden text-sm sm:text-base font-semibold tracking-normal rounded-xl py-2.5",
-                    "transform-gpu transition-all duration-300 ease-out",
-                    plan.isPopular
-                      ? "bg-gradient-to-r from-electric to-glacier text-midnight border-none hover:opacity-90 shadow-md hover:shadow-electric/30"
-                      : "bg-midnight/70 text-ice border-glacier/25 hover:border-glacier hover:bg-electric/20 hover:text-white"
-                  )}
-                >
-                  {plan.buttonText}
-                </Link>
+                  label={plan.buttonText}
+                  size="default"
+                  className="w-full text-sm sm:text-base font-semibold"
+                  fillColor={plan.isPopular ? "#0868DB" : "#030407"}
+                  accentColor={plan.isPopular ? "#8BC9F7" : "#0868DB"}
+                  accentSoftColor="#C8E9FF"
+                  labelColor={plan.isPopular ? "#030407" : "#ffffff"}
+                />
 
                 <p className="mt-4 text-xs leading-5 text-ice/50">
                   {plan.description}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Marquee } from "@/components/ui/marquee-03-utils/marquee";
 
@@ -66,10 +67,10 @@ export const ReviewCard = ({ profile, name, username, body }: Review) => {
       <CardContent className="p-0 flex flex-col gap-3">
         <div className="flex flex-row items-center gap-3">
           <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-indigo transition-colors duration-300">
-            <img
+            <Image
               className="h-full w-full rounded-full object-cover aspect-square"
-              width="40"
-              height="40"
+              width={40}
+              height={40}
               alt={name}
               src={profile}
             />

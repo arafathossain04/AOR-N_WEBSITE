@@ -27,12 +27,9 @@ export function Hero({
       <div className="hero-eclipse-bloom" aria-hidden="true" />
     <div className="flex flex-col items-center justify-center gap-4 px-6 text-center mt-20">
       {eyebrow && (
-        <a href="#" className="group relative z-10">
-          <span className="mx-auto flex w-fit items-center justify-center rounded-3xl border-[1px] border-glacier/25 bg-gradient-to-tr from-glacier/10 via-electric/10 to-transparent px-5 py-2 text-sm font-sans uppercase tracking-tight text-glacier">
+          <span className="mx-auto flex w-fit items-center justify-center rounded-3xl border border-glacier/25 bg-gradient-to-tr from-glacier/10 via-electric/10 to-transparent px-5 py-2 text-sm font-sans uppercase tracking-tight text-glacier">
             {eyebrow}
-            <ChevronRight className="ml-2 inline h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </span>
-        </a>
       )}
 
       <h1 className="animate-fade-in relative z-10 -translate-y-4 bg-gradient-to-br from-white from-50% to-indigo bg-clip-text py-6 font-display text-5xl font-semibold leading-none tracking-tighter text-transparent opacity-0 sm:text-6xl md:text-7xl lg:text-8xl">

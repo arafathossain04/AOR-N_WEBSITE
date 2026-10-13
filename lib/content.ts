@@ -1,3 +1,18 @@
+export interface VideoAd {
+  title: string;
+  duration: string;
+  thumbnail: string;
+  videoUrl: string;
+  description?: string;
+}
+
+export interface ImageAd {
+  imgUrl: string;
+  alt?: string;
+  title?: string;
+  category?: string;
+}
+
 export const site = {
   name: "AORÈN",
   tagline: "AI advertising, made distinctly yours.",
@@ -13,6 +28,91 @@ export const site = {
   policies: ["Two focused revision rounds included", "Clear delivery timelines before we begin", "Usage rights tailored to your campaign", "Transparent AI-assisted creative process"],
   mission: "To give ambitious brands a more imaginative, agile way to show up.",
   works: ["Editorial motion study", "Skincare product story", "Future fashion campaign"],
+  imageAds: [
+    {
+      imgUrl: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80",
+      alt: "High fashion avant-garde editorial",
+      title: "Vogue Futurism",
+      category: "Fashion Ad",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80",
+      alt: "Skincare luxury serum story",
+      title: "Luminescence Flora",
+      category: "Skincare",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
+      alt: "Minimalist timepiece campaign",
+      title: "Chronos Minimal",
+      category: "Luxury Goods",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
+      alt: "Niche fragrance campaign visual",
+      title: "Obsidian Essence",
+      category: "Fragrance",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      alt: "High-performance sports car",
+      title: "Apex Aerodynamics",
+      category: "Automotive",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
+      alt: "Digital liquid sculptural art",
+      title: "Synthetic Dreams",
+      category: "Digital 3D",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1200&q=80",
+      alt: "Cinematic portrait lighting",
+      title: "Prism Identity",
+      category: "Editorial",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1200&q=80",
+      alt: "Minimalist fine jewelry",
+      title: "Aura Gold Studio",
+      category: "Jewelry",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80",
+      alt: "High-octane footwear launch",
+      title: "Kinetics Velocity",
+      category: "Footwear",
+    },
+    {
+      imgUrl: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+      alt: "Surreal neo-classical composition",
+      title: "Neo Antiquity",
+      category: "Brand Campaign",
+    },
+  ],
+  /**
+   * ============================================================================
+   * VIDEO ADS (REELS)
+   * ----------------------------------------------------------------------------
+   * HOW TO UPLOAD YOUR OWN VIDEOS:
+   * 1. Local Files: Place your .mp4 or .webm video in `public/videos/`
+   *    (e.g., `public/videos/reel1.mp4`) and set `videoUrl: "/videos/reel1.mp4"`.
+   * 2. Hosted Files: Provide any direct HTTPS video link (Cloudflare, S3, Supabase, etc.)
+   * 3. Carousel Behavior:
+   *    - If you have 1, 2, or 3 videos: Displays in a clean, balanced grid.
+   *    - If you have more than 3 videos: Automatically turns into an auto-swiping
+   *      carousel with pause-on-hover and pause-while-playing!
+   * ============================================================================
+   */
+  videoAds: [
+    {
+      title: "Aetherial Motion Study",
+      duration: "0:15",
+      thumbnail: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+      videoUrl: "https://vjs.zencdn.net/v/oceans.mp4",
+      description: "High-cadence cinematic motion study tailored for modern luxury fashion houses.",
+    },
+  ],
   pricing: [
     { name: "Basic", price: "$—", features: ["Single creative direction", "1 finished asset", "Platform-ready delivery", "2 revision rounds"], featured: false },
     { name: "Pro", price: "$—", features: ["Expanded creative direction", "3 finished assets", "Multiple aspect ratios", "2 revision rounds", "Priority timeline"], featured: true },

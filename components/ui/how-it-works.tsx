@@ -18,13 +18,13 @@ interface HowItWorksProps extends React.HTMLAttributes<HTMLElement> {
 export function HowItWorks({ title, description, steps, className, ...props }: HowItWorksProps) {
   return (
     <section id="services" className={cn("w-full bg-navy/45 py-16 sm:py-24", className)} {...props}>
-      <div className="mx-auto max-w-4xl px-5">
+      <div className="mx-auto max-w-6xl px-5">
         <div className="mx-auto mb-16 max-w-4xl text-center">
           <h2 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">{title}</h2>
           <p className="mt-4 text-lg text-ice/70">{description}</p>
         </div>
 
-        <div className="relative mx-auto mb-8 w-full max-w-4xl">
+        <div className="relative mx-auto mb-8 w-full max-w-6xl">
           <div aria-hidden="true" className="absolute left-[16.6667%] top-1/2 h-px w-[66.6667%] -translate-y-1/2 bg-electric" />
           <div className="relative grid grid-cols-3">
             {steps.map((step, index) => (
@@ -35,7 +35,7 @@ export function HowItWorks({ title, description, steps, className, ...props }: H
           </div>
         </div>
 
-        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3">
           {steps.map(({ icon: Icon, title: stepTitle, description: stepDescription, benefits }) => (
             <div key={stepTitle} className="relative rounded-2xl border border-indigo bg-[black] p-6 text-ice transition-all duration-300 ease-in-out hover:scale-105 hover:bg-#050B2B hover:border-electric w-full">
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-electric/15 text-glacier"><Icon className="h-6 w-6" /></div>

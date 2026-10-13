@@ -1,0 +1,4 @@
+import { Instagram, Linkedin } from "lucide-react";
+import { site } from "@/lib/content";
+import { Container } from "@/components/ui/Container";
+export function Footer() { return <footer className="border-t border-glacier/10 py-10"><Container className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between"><div><a href="#top" className="font-display text-2xl tracking-[.13em] text-white">{site.name}</a><p className="mt-2 text-sm text-ice/55">{site.tagline}</p></div><div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-ice/60">{site.nav.map(item => <a className="hover:text-glacier" href={item.href} key={item.href}>{item.label}</a>)}</div><div className="flex items-center gap-4 text-ice/65"><a href="#" aria-label="Instagram"><Instagram size={18} /></a><a href="#" aria-label="LinkedIn"><Linkedin size={18} /></a><span className="text-xs">© {new Date().getFullYear()} AORÈN</span></div></Container></footer>; }

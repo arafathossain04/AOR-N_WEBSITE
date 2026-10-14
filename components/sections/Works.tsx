@@ -60,7 +60,7 @@ export function Works() {
               <SocialCards
                 cards={site.imageAds}
                 autoSwipe={true}
-                autoSwipeInterval={3500}
+                autoSwipeInterval={1500}
                 className="my-2"
               />
             </div>
@@ -97,7 +97,7 @@ export function Works() {
             <VideoReelsCarousel
               videos={site.videoAds}
               autoSwipe={true}
-              autoSwipeInterval={4500}
+              autoSwipeInterval={2500}
             />
           </Reveal>
         </div>

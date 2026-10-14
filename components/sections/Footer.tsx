@@ -108,7 +108,7 @@ export function Footer() {
                       href="#contact"
                       className="text-xs sm:text-sm text-glacier/90 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(139,201,247,0.7)] inline-flex items-center gap-1"
                     >
-                      <span>Get a Quote</span>
+                      <span>Contact Us</span>
                       <ArrowRight className="h-3 w-3" />
                     </a>
                   </li>

@@ -52,7 +52,7 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <ShinyButton href="#contact" size="sm" label="Get a Quote" className="ml-1" />
+          <ShinyButton href="#contact" size="sm" label="Contact Us" className="ml-1" />
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -88,7 +88,7 @@ export function Header() {
               <ShinyButton
                 href="#contact"
                 size="sm"
-                label="Get a Quote"
+                label="Contact Us"
                 className="w-full"
                 onClick={() => setOpen(false)}
               />

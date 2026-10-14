@@ -22,8 +22,8 @@ BRAND COLORS (define as CSS variables and Tailwind theme colors)
 Overall look: dark, premium, minimal, with subtle blue gradients and soft glows. Use gradients flowing from #030407 through #050B2B and #071F78 into #0868DB sparingly (hero glow, button hover, card borders). Ensure text contrast is accessible.
 
 SITE STRUCTURE (one page with anchor links, in this exact order)
-0. Header / Navbar: "AORÈN" wordmark on the left, anchor links (Services, Work, Pricing, About, Contact), and a "Get a Quote" CTA button. Sticky, with a blurred translucent background that appears after scrolling. Collapsible mobile menu.
-1. Hero: large headline, short subheadline, two buttons (primary "Get a Quote", secondary "View Our Work"), and a placeholder area for a background video/visual with a soft blue gradient glow.
+0. Header / Navbar: "AORÈN" wordmark on the left, anchor links (Services, Work, Pricing, About, Contact), and a "Contact Us" CTA button. Sticky, with a blurred translucent background that appears after scrolling. Collapsible mobile menu.
+1. Hero: large headline, short subheadline, two buttons (primary "Contact Us", secondary "View Our Work"), and a placeholder area for a background video/visual with a soft blue gradient glow.
 2. Services:Services (video ads, image ads, campaign concepts, product-on-model visuals) as cards with icons; Policies (revisions, delivery timelines, usage rights, AI disclosure) as a simple list or accordion; Mission as a short statement.
 3. Creative Works: keep it normal i will tell you later.
 4. Pricing: four cards - Basic, Pro, Max, Custom. Each has a name, placeholder price (Custom shows "Let's talk"), 4-5 placeholder feature bullets, and a CTA button. i will give you the final design later

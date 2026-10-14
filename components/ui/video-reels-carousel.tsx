@@ -31,7 +31,7 @@ function formatVideoUrl(url?: string): string {
 export function VideoReelsCarousel({
   videos,
   autoSwipe = true,
-  autoSwipeInterval = 4500,
+  autoSwipeInterval = 2500,
   className = "",
 }: VideoReelsCarouselProps) {
   // Track which video is actively playing (index or null)

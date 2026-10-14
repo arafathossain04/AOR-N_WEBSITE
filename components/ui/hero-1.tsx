@@ -26,7 +26,7 @@ export function Hero({
       <div className="hero-eclipse-bloom" aria-hidden="true" />
     <div className="flex flex-col items-center justify-center gap-4 px-6 text-center mt-20">
       {eyebrow && (
-          <span className="mx-auto flex w-fit items-center justify-center rounded-3xl border border-glacier/25 bg-gradient-to-tr from-glacier/10 via-electric/10 to-transparent px-5 py-2 text-sm font-sans uppercase tracking-tight text-glacier">
+          <span className="mx-auto flex w-fit items-center justify-center bg-gradient-to-tr from-glacier/10 via-electric/10 to-transparent px-5 py-2 text-sm font-sans uppercase tracking-tight text-glacier">
             {eyebrow}
           </span>
       )}

@@ -1,9 +1,0 @@
-{
-  "/api/contact/route": "/api/contact",
-  "/apple-icon.png/route": "/apple-icon.png",
-  "/icon.svg/route": "/icon.svg",
-  "/favicon.ico/route": "/favicon.ico",
-  "/icon.png/route": "/icon.png",
-  "/_not-found/page": "/_not-found",
-  "/page": "/"
-}

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Marquee } from "@/components/ui/marquee-03-utils/marquee";
+import { cn } from "@/lib/utils";
 
 export type Review = {
   name: string;
@@ -61,9 +62,15 @@ export const reviews: Review[] = [
   },
 ];
 
-export const ReviewCard = ({ profile, name, username, body }: Review) => {
+export const ReviewCard = ({
+  profile,
+  name,
+  username,
+  body,
+  className,
+}: Review & { className?: string }) => {
   return (
-    <Card className="relative w-full max-w-sm cursor-pointer overflow-hidden rounded-2xl border border-indigo bg-black p-5 text-ice shadow-none transition-all duration-300 ease-in-out hover:scale-[1.02] hover:bg-[#050B2B] hover:border-electric">
+    <Card className={cn("relative w-full max-w-sm cursor-pointer overflow-hidden rounded-2xl border border-indigo bg-black p-5 text-ice shadow-none transition-all duration-300 ease-in-out hover:scale-[1.02] hover:bg-[#050B2B] hover:border-electric", className)}>
       <CardContent className="p-0 flex flex-col gap-3">
         <div className="flex flex-row items-center gap-3">
           <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-full ring-2 ring-indigo transition-colors duration-300">
@@ -88,56 +95,76 @@ export const ReviewCard = ({ profile, name, username, body }: Review) => {
 
 const VerticalMarqueeDemo = () => {
   return (
-    <div className="relative flex h-[580px] w-full flex-row items-center justify-center overflow-hidden">
-      <div className="flex flex-row items-center justify-center w-full gap-4 px-2 h-full">
+    <div className="relative w-full">
+      <div className="relative grid h-[520px] grid-cols-2 gap-2 overflow-hidden md:hidden">
         <Marquee
           pauseOnHover
           vertical
-          className="[--duration:24s] h-full sm:flex hidden flex-1"
+          className="[--duration:24s] h-full min-w-0 [&>div]:w-full"
         >
           {reviews
-            .filter((_, i) => i % 3 === 0)
-            .map((review, idx) => (
-              <ReviewCard key={idx} {...review} />
+            .filter((_, i) => i % 2 === 0)
+            .map((review) => (
+              <ReviewCard key={review.username} {...review} className="max-w-none p-3" />
             ))}
         </Marquee>
         <Marquee
           reverse
           pauseOnHover
           vertical
-          className="[--duration:24s] h-full hidden sm:flex flex-1"
+          className="[--duration:24s] h-full min-w-0 [&>div]:w-full"
         >
           {reviews
-            .filter((_, i) => i % 3 === 1)
-            .map((review, idx) => (
-              <ReviewCard key={idx} {...review} />
+            .filter((_, i) => i % 2 === 1)
+            .map((review) => (
+              <ReviewCard key={review.username} {...review} className="max-w-none p-3" />
             ))}
         </Marquee>
-        <Marquee
-          pauseOnHover
-          vertical
-          className="[--duration:24s] h-full hidden lg:flex flex-1"
-        >
-          {reviews
-            .filter((_, i) => i % 3 === 2)
-            .map((review, idx) => (
-              <ReviewCard key={idx} {...review} />
-            ))}
-        </Marquee>
-        <Marquee
-          pauseOnHover
-          vertical
-          className="[--duration:24s] h-full sm:hidden flex flex-1"
-        >
-          {reviews.map((review, idx) => (
-            <ReviewCard key={idx} {...review} />
-          ))}
-        </Marquee>
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-20 bg-gradient-to-b from-[#030407] via-[#030407]/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-20 bg-gradient-to-t from-[#030407] via-[#030407]/80 to-transparent" />
       </div>
 
-      {/* Atmospheric gradient fade-out masks matching the site's midnight background */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030407] via-[#030407]/80 to-transparent z-10" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030407] via-[#030407]/80 to-transparent z-10" />
+      <div className="relative hidden h-[580px] w-full flex-row items-center justify-center overflow-hidden md:flex">
+        <div className="flex h-full w-full flex-row items-center justify-center gap-4 px-2">
+          <Marquee
+            pauseOnHover
+            vertical
+            className="[--duration:24s] h-full flex-1"
+          >
+            {reviews
+              .filter((_, i) => i % 3 === 0)
+              .map((review) => (
+                <ReviewCard key={review.username} {...review} />
+              ))}
+          </Marquee>
+          <Marquee
+            reverse
+            pauseOnHover
+            vertical
+            className="[--duration:24s] h-full flex-1"
+          >
+            {reviews
+              .filter((_, i) => i % 3 === 1)
+              .map((review) => (
+                <ReviewCard key={review.username} {...review} />
+              ))}
+          </Marquee>
+          <Marquee
+            pauseOnHover
+            vertical
+            className="[--duration:24s] hidden h-full flex-1 lg:flex"
+          >
+            {reviews
+              .filter((_, i) => i % 3 === 2)
+              .map((review) => (
+                <ReviewCard key={review.username} {...review} />
+              ))}
+          </Marquee>
+        </div>
+
+        <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-32 bg-gradient-to-b from-[#030407] via-[#030407]/80 to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-32 bg-gradient-to-t from-[#030407] via-[#030407]/80 to-transparent" />
+      </div>
     </div>
   );
 };

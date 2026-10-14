@@ -36,9 +36,6 @@ body { margin:0; background:var(--midnight); color:var(--ice); font-family:var(-
 a { color:inherit; text-decoration:none; }
 button, input, select, textarea { font: inherit; }
 :focus-visible { outline:2px solid var(--glacier); outline-offset:3px; }
-.text-gradient { background:linear-gradient(110deg,#fff 15%,var(--ice) 50%,var(--glacier)); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.surface { border:1px solid rgba(139,201,247,.14); background:linear-gradient(145deg,rgba(7,31,120,.26),rgba(5,11,43,.64)); }
-
 .hero-eclipse { position:absolute; z-index:0; bottom:calc(-200vw + 2rem); left:50%; top: 90%; width:390vw; height:320vw; transform:translateX(-50%); border-radius:50%; background:#030407; pointer-events:none;}
 .hero-eclipse::after { content:""; position:absolute; z-index: 1; top:2px; left:50%; width:390vw; height:320vw; transform:translateX(-50%); border-radius: 50%; background:transparent; box-shadow:0 0 12px 2px rgba(200,233,255,.9),0 0 18px 4px rgba(139,201,247,.45); }
 @media (max-width:640px) { .hero-eclipse { bottom:calc(-180vw + 2.75rem); width:130vw; height:60vw; } .hero-eclipse::after { bottom:calc(-180vw + 2.75rem); width:130vw; height:60vw; }}

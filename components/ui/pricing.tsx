@@ -2,21 +2,16 @@
 
 import { buttonVariants } from "@/components/ui/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import Link from "next/link";
-import { useState, useRef } from "react";
-import confetti from "canvas-confetti";
 import NumberFlow from "@number-flow/react";
 
 export interface PricingPlan {
   name: string;
   price: string;
-  yearlyPrice: string;
   period: string;
   features: string[];
   description: string;
@@ -41,40 +36,7 @@ export function Pricing({
   title = "Choose a starting point.",
   description = "Indicative studio packages for video and image advertising. Flexible retainers and custom scopes available.",
 }: PricingProps) {
-  // Default to billed annually as requested
-  const [isMonthly, setIsMonthly] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
-  const switchRef = useRef<HTMLButtonElement>(null);
-
-  const handleToggle = (checked: boolean) => {
-    // When checked is true, annual billing is active (isMonthly = false)
-    setIsMonthly(!checked);
-    if (checked && switchRef.current) {
-      const rect = switchRef.current.getBoundingClientRect();
-      const x = rect.left + rect.width / 2;
-      const y = rect.top + rect.height / 2;
-
-      confetti({
-        particleCount: 50,
-        spread: 60,
-        origin: {
-          x: x / window.innerWidth,
-          y: y / window.innerHeight,
-        },
-        colors: [
-          "#0868DB",
-          "#8BC9F7",
-          "#C8E9FF",
-          "#071F78",
-        ],
-        ticks: 200,
-        gravity: 1.2,
-        decay: 0.94,
-        startVelocity: 30,
-        shapes: ["circle"],
-      });
-    }
-  };
 
   return (
     <div className="container mx-auto px-4 py-16 sm:py-24">
@@ -92,22 +54,6 @@ export function Pricing({
             {description}
           </p>
         )}
-      </div>
-
-      <div className="flex justify-center items-center mb-12">
-        <label className="relative inline-flex items-center cursor-pointer">
-          <Label className="cursor-pointer">
-            <Switch
-              ref={switchRef as unknown as React.RefObject<HTMLButtonElement>}
-              checked={!isMonthly}
-              onCheckedChange={handleToggle}
-              className="relative data-[state=checked]:bg-electric data-[state=unchecked]:bg-navy/80 border border-electric"
-            />
-          </Label>
-        </label>
-        <span className="ml-3 font-semibold text-sm sm:text-base text-ice">
-          Annual billing <span className="text-glacier">(Save 20%)</span>
-        </span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
@@ -161,11 +107,7 @@ export function Pricing({
                     <>
                       <span className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
                         <NumberFlow
-                          value={
-                            isMonthly
-                              ? Number(plan.price)
-                              : Number(plan.yearlyPrice)
-                          }
+                          value={Number(plan.price)}
                           format={{
                             style: "currency",
                             currency: "USD",
@@ -193,13 +135,11 @@ export function Pricing({
                   )}
                 </div>
 
-                <p className="text-xs leading-5 text-ice/50 mt-1">
-                  {plan.isCustom
-                    ? "tailored scope & deliverables"
-                    : isMonthly
-                    ? "billed monthly"
-                    : "billed annually"}
-                </p>
+                {plan.isCustom && (
+                  <p className="text-xs leading-5 text-ice/50 mt-1">
+                    tailored scope &amp; deliverables
+                  </p>
+                )}
 
                 <ul className="mt-6 gap-3 flex flex-col flex-1 text-sm text-ice/80">
                   {plan.features.map((feature, idx) => (

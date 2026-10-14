@@ -10,16 +10,16 @@ import { ShinyButton } from "@/components/ui/shiny-button";
  * ============================================================================
  */
 export const CONTACT_CONFIG = {
-  EMAIL: "hello@aoren.demo",
+  EMAIL: "collab@theaoren.com",
   INSTAGRAM_URL: "https://www.instagram.com/aoren001/",
   INSTAGRAM_HANDLE: "@aoren001",
   LINKEDIN_URL: "https://linkedin.com/company/aoren-demo",
   LINKEDIN_LABEL: "AORÈN",
   WHATSAPP_NUMBER: "8801407002630", // Country code + phone number (no +, spaces, or dashes)
   WHATSAPP_MESSAGE: "Hi AORÈN, I'd like to discuss an ad project with your company..",
-  EMAILJS_SERVICE_ID: "service_demo",
-  EMAILJS_TEMPLATE_ID: "template_demo",
-  EMAILJS_PUBLIC_KEY: "public_key_demo",
+  EMAILJS_SERVICE_ID: "service_nkxcfbe",
+  EMAILJS_TEMPLATE_ID: "template_5lf8g1n",
+  EMAILJS_PUBLIC_KEY: "GugZCWy5gQvq6Vfm-",
 };
 
 interface FormState {

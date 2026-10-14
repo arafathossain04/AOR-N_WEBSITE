@@ -185,5 +185,5 @@ export const site = {
     { name: "Arafat Hossain Araf", role: "Founder & CEO", bio: "Leading creative direction, visual language, and AI-native brand storytelling.", image: "/team/arafat.jpg" },
     { name: "Faisal Islam Shaker", role: "COO & Co-Founder", bio: "Spearheading studio operations, scalable client delivery, and agile production.", image: "/team/faisal.jpg" },
   ],
-  contact: { email: "hello@aoren.studio", instagram: "Instagram", linkedin: "LinkedIn" },
+  contact: { email: "collab@theaoren.com", instagram: "Instagram", linkedin: "LinkedIn" },
 };

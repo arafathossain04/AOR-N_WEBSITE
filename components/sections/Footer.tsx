@@ -172,10 +172,10 @@ export function Footer() {
                 <ul className="space-y-3">
                   <li>
                     <a
-                      href="mailto:hello@aoren.studio"
+                      href="mailto:collab@theaoren.com"
                       className="text-xs sm:text-sm text-ice/65 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(139,201,247,0.55)] inline-block break-all"
                     >
-                      hello@aoren.studio
+                      collab@theaoren.com
                     </a>
                   </li>
                   <li>
@@ -267,7 +267,7 @@ export function Footer() {
 
               {/* Mail */}
               <a
-                href="mailto:hello@aoren.studio"
+                href="mailto:collab@theaoren.com"
                 aria-label="Email studio"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-electric bg-navy/50 text-ice/70 backdrop-blur-md transition-all duration-300 hover:-translate-y-0.5 hover:text-white hover:border-glacier/50 hover:bg-electric/20 hover:shadow-[0_0_15px_rgba(8,104,219,0.35)]"
               >

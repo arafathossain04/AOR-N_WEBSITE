@@ -7,6 +7,8 @@ export const aorenPricingPlans: PricingPlan[] = [
     name: "Basic",
     price: "199",
     period: "package",
+    whatsappMessage:
+      "Hi AORÈN! I'm interested in the Basic package ($199): 8 static ads + 4 video ads. I'd like to schedule a meeting to discuss my brand and campaign.",
     features: [
       "8 premium static ads",
       "4 high-quality video ads (9:16)",
@@ -18,13 +20,14 @@ export const aorenPricingPlans: PricingPlan[] = [
     ],
     description: "Ideal for early-stage brands launching a focused campaign.",
     buttonText: "Schedule a Meeting",
-    href: "#contact",
     isPopular: false,
   },
   {
     name: "Pro",
     price: "399",
     period: "package",
+    whatsappMessage:
+      "Hi AORÈN! I'm interested in the Pro package ($399): 15 static ads + 6 video ads. I'd like to schedule a meeting to discuss my brand and campaign.",
     features: [
       "15 premium static ads",
       "6 high-quality video ads (9:16)",
@@ -37,13 +40,14 @@ export const aorenPricingPlans: PricingPlan[] = [
     ],
     description: "Designed for ambitious growth brands running multi-channel ads.",
     buttonText: "Schedule a Meeting",
-    href: "#contact",
     isPopular: false,
   },
   {
     name: "MAX",
     price: "599",
     period: "package",
+    whatsappMessage:
+      "Hi AORÈN! I'm interested in the Max package ($599): 30 static ads + 14 video ads across multiple aspect ratios. I'd like to schedule a meeting to discuss my brand and campaign.",
     features: [
       "30 premium static ads",
       "14 high-quality video ads",
@@ -57,7 +61,6 @@ export const aorenPricingPlans: PricingPlan[] = [
     ],
     description: "Our highest output partnership for scale-ready campaigns.",
     buttonText: "Schedule a Meeting",
-    href: "#contact",
     isPopular: true,
     popularLabel: "Best Value",
   },
@@ -65,6 +68,8 @@ export const aorenPricingPlans: PricingPlan[] = [
     name: "Custom",
     price: "0",
     period: "custom",
+    whatsappMessage:
+      "Hi AORÈN! I'm interested in a Custom package. I'd like to schedule a meeting to discuss a tailored scope and deliverables for my brand.",
     features: [
       "Amount of ADs customization",
       "Custom agreements",
@@ -75,7 +80,6 @@ export const aorenPricingPlans: PricingPlan[] = [
     ],
     description: "Enterprise and bespoke solutions tailored to your brand roadmap.",
     buttonText: "Schedule a Meeting",
-    href: "#contact",
     isPopular: false,
     isCustom: true,
     customPriceLabel: "Let’s talk",

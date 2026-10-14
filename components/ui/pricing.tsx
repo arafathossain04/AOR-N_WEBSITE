@@ -8,15 +8,16 @@ import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
 import Link from "next/link";
 import NumberFlow from "@number-flow/react";
+import { getWhatsAppLink } from "@/lib/whatsapp";
 
 export interface PricingPlan {
   name: string;
   price: string;
   period: string;
+  whatsappMessage: string;
   features: string[];
   description: string;
   buttonText: string;
-  href: string;
   isPopular: boolean;
   popularLabel?: string;
   isCustom?: boolean;
@@ -153,8 +154,10 @@ export function Pricing({
                 <hr className="w-full my-6 border-indigo/60" />
 
                 <ShinyButton
-                  href={plan.href}
+                  href={getWhatsAppLink(plan.whatsappMessage)}
                   label={plan.buttonText}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   size="default"
                   className="w-full text-sm sm:text-base font-semibold"
                   fillColor={plan.isPopular ? "#0868DB" : "#030407"}

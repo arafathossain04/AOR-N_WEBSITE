@@ -34,6 +34,8 @@ export interface ShinyButtonProps {
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
   className?: string;
   href?: string;
+  target?: React.HTMLAttributeAnchorTarget;
+  rel?: string;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
   fillColor?: string;
@@ -56,6 +58,8 @@ export function ShinyButton({
   onClick,
   className = "",
   href,
+  target,
+  rel,
   type = "button",
   disabled = false,
   fillColor = "#030407",
@@ -314,6 +318,8 @@ export function ShinyButton({
       {href ? (
         <a
           href={href}
+          target={target}
+          rel={rel}
           className={`${scope} ${className}`}
           onClick={onClick}
           aria-label={typeof label === "string" ? label : undefined}

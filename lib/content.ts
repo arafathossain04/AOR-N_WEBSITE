@@ -180,7 +180,7 @@ export const site = {
     { title: "More variations", text: "Explore directions, formats and details with ease.", icon: "Layers3" },
     { title: "Made for every channel", text: "Assets sized and styled for where your audience is.", icon: "PanelsTopLeft" },
   ],
-  about: { title: "A modern creative studio with a wide lens.", text: "AORÈN is an independent AI advertising studio combining cinematic art direction, emerging tools, and a deep respect for brand feeling." },
+  about: { title: "A modern creative studio with a wide lens.", text: "AORÈN is an independent AI-powered advertising studio combining cinematic art direction, emerging tools, and a deep respect for brand feeling." },
   founders: [
     { name: "Arafat Hossain Araf", role: "Founder & CEO", bio: "Leading creative direction, visual language, and AI-native brand storytelling.", image: "/team/arafat.jpg" },
     { name: "Faisal Islam Shaker", role: "COO & Co-Founder", bio: "Spearheading studio operations, scalable client delivery, and agile production.", image: "/team/faisal.jpg" },

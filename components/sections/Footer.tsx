@@ -200,7 +200,7 @@ export function Footer() {
                   </li>
                   <li>
                     <a
-                      href="https://linkedin.com/company/aoren-demo"
+                      href="https://www.linkedin.com/in/aorèn-001s/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-xs sm:text-sm text-ice/65 transition-all duration-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(139,201,247,0.55)] inline-block"
@@ -256,7 +256,7 @@ export function Footer() {
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com/company/aoren-demo"
+                href="https://www.linkedin.com/in/aorèn-001s/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

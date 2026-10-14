@@ -13,7 +13,7 @@ export const CONTACT_CONFIG = {
   EMAIL: "collab@theaoren.com",
   INSTAGRAM_URL: "https://www.instagram.com/aoren001/",
   INSTAGRAM_HANDLE: "@aoren001",
-  LINKEDIN_URL: "https://linkedin.com/company/aoren-demo",
+  LINKEDIN_URL: "https://www.linkedin.com/in/aorèn-001s/",
   LINKEDIN_LABEL: "AORÈN",
   WHATSAPP_NUMBER: "8801407002630", // Country code + phone number (no +, spaces, or dashes)
   WHATSAPP_MESSAGE: "Hi AORÈN, I'd like to discuss an ad project with your company..",

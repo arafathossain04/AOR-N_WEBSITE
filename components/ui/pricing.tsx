@@ -101,7 +101,7 @@ export function Pricing({
               ref={switchRef as unknown as React.RefObject<HTMLButtonElement>}
               checked={!isMonthly}
               onCheckedChange={handleToggle}
-              className="relative data-[state=checked]:bg-electric data-[state=unchecked]:bg-navy/80 border border-glacier/20"
+              className="relative data-[state=checked]:bg-electric data-[state=unchecked]:bg-navy/80 border border-electric"
             />
           </Label>
         </label>

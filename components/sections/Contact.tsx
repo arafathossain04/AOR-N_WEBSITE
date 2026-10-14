@@ -11,12 +11,12 @@ import { ShinyButton } from "@/components/ui/shiny-button";
  */
 export const CONTACT_CONFIG = {
   EMAIL: "hello@aoren.demo",
-  INSTAGRAM_URL: "https://instagram.com/aoren.demo",
-  INSTAGRAM_HANDLE: "@aoren.demo",
+  INSTAGRAM_URL: "https://www.instagram.com/aoren001/",
+  INSTAGRAM_HANDLE: "@aoren001",
   LINKEDIN_URL: "https://linkedin.com/company/aoren-demo",
   LINKEDIN_LABEL: "AORÈN",
-  WHATSAPP_NUMBER: "10000000000", // Country code + phone number (no +, spaces, or dashes)
-  WHATSAPP_MESSAGE: "Hi AORÈN, I'd like to discuss an ad project.",
+  WHATSAPP_NUMBER: "8801407002630", // Country code + phone number (no +, spaces, or dashes)
+  WHATSAPP_MESSAGE: "Hi AORÈN, I'd like to discuss an ad project with your company..",
   EMAILJS_SERVICE_ID: "service_demo",
   EMAILJS_TEMPLATE_ID: "template_demo",
   EMAILJS_PUBLIC_KEY: "public_key_demo",

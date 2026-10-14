@@ -1,12 +1,10 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/Button";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, Star } from "lucide-react";
-import Link from "next/link";
 import NumberFlow from "@number-flow/react";
 import { getWhatsAppLink } from "@/lib/whatsapp";
 

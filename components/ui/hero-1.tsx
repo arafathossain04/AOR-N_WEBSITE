@@ -1,6 +1,5 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 
 interface HeroProps {

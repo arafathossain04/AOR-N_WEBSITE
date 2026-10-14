@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
+import { Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight } from "lucide-react";
 import type { VideoAd } from "@/lib/content";
 
 export interface VideoReelsCarouselProps {

@@ -173,6 +173,7 @@ export function VideoReelsCarousel({
           {reel.thumbnail && (
             <img
               src={reel.thumbnail}
+              alt={reel.title || "Reel thumbnail"}
               loading="lazy"
               className={`h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${
                 isPlaying ? "opacity-0 pointer-events-none" : "opacity-100"

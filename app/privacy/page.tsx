@@ -27,7 +27,7 @@ export default function PrivacyPage() {
       <p>Contact form messages are delivered to us through the email service EmailJS. Our website is hosted and delivered through Cloudflare, which may process technical data such as IP addresses and request logs to serve and protect the site. These providers handle data under their own privacy policies.</p>
 
       <h2 className="mt-8 mb-2 text-xl text-white">Cookies and analytics</h2>
-      <p>At the time of writing, this site does not use advertising cookies. If we add analytics in the future, we will update this page.</p>
+      <p>This site uses Cloudflare Web Analytics to understand how many people visit and which pages they view. It does not use cookies, does not track you across other websites, and does not build advertising profiles. We do not use advertising cookies. If we change our analytics in the future, we will update this page.</p>
 
       <h2 className="mt-8 mb-2 text-xl text-white">How long we keep it</h2>
       <p>We keep enquiry emails for as long as needed to respond and to keep business records, then delete them when they are no longer needed.</p>

@@ -223,21 +223,10 @@ export function Footer() {
               <span>© 2026 AORÈN. All rights reserved.</span>
               <span className="hidden sm:inline text-ice/20">•</span>
               <a
-                href="#top"
+                href="/privacy"
                 className="transition-colors hover:text-white"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToTop();
-                }}
               >
                 Privacy & Usage
-              </a>
-              <span className="hidden sm:inline text-ice/20">•</span>
-              <a
-                href="#contact"
-                className="transition-colors hover:text-white"
-              >
-                Inquiries
               </a>
             </div>
 

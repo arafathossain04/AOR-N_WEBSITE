@@ -8,5 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://theaoren.com",
       lastModified: new Date(),
     },
+    {
+      url: "https://theaoren.com/privacy",
+      lastModified: new Date(),
+    },
   ];
 }
